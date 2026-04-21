@@ -16,6 +16,6 @@ age = st.number_input("Age")
 income = st.number_input("Monthly Income")
 
 if st.button("Predict"):
-    data = [age, income] + [0]*8  # adjust features
+    data = [0, age, 0, 0, income, 0, 0, 0, 0, 0] 
     result = predict(data)
     st.write("Default Probability:", result)

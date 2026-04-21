@@ -9,6 +9,8 @@ Original file is located at
 
 import streamlit as st
 from predict import predict
+from rag import retrieve
+from llm import generate
 
 st.title("Credit Risk Predictor")
 

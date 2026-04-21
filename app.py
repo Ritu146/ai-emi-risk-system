@@ -21,3 +21,34 @@ if st.button("Predict"):
     data = [0, 0, age, 0, 0, income, 0, 0, 0, 0, 0] 
     result = predict(data)
     st.write("Default Probability:", result)
+
+import streamlit as st
+
+st.title("AI Credit Risk App")
+
+# --------------------------
+# EXISTING PREDICTION PART
+# --------------------------
+
+age = st.number_input("Age")
+income = st.number_input("Income")
+
+if st.button("Predict"):
+    data = [0, 0, age, 0, 0, income, 0, 0, 0, 0, 0]   # adjust features
+    result = predict(data)
+    st.write("Default Probability:", result)
+
+# --------------------------
+# CHAT PART
+# --------------------------
+
+st.subheader("💬 Ask Questions")
+
+query = st.text_input("Ask something about risk:")
+
+if query:
+    context = retrieve(query)
+    answer = generate(query, context)
+    
+    st.write("### Answer:")
+    st.write(answer)

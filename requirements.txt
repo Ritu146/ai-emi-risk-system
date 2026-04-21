@@ -3,3 +3,6 @@ torch
 scikit-learn
 joblib
 numpy
+sentence-transformers
+faiss-cpu
+transformers

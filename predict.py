@@ -6,7 +6,7 @@ from model import Model
 # Load once
 scaler = joblib.load("scaler.pkl")
 
-model = Model(10)  # change to your actual input features
+model = Model(11)  # change to your actual input features
 model.load_state_dict(torch.load("model.pth", map_location=torch.device('cpu')))
 model.eval()
 

@@ -3,10 +3,11 @@ import faiss
 import numpy as np
 
 docs = [
-    "High debt increases default risk",
-    "Late payments indicate high risk",
-    "Low income customers are risky",
-    "More credit lines increase risk"
+    "Low income reduces repayment capacity, making it harder to pay EMIs on time.",
+    "High debt increases financial burden and leads to higher default probability.",
+    "Late payments indicate poor financial discipline and increase credit risk.",
+    "Too many credit lines can lead to over-leveraging and repayment stress.",
+    "High dependency reduces disposable income, increasing default chances."
 ]
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
